@@ -35,11 +35,11 @@ export default class App extends React.Component {
   }
 
   calculateMonthlyPayment() {
-    let mortgage = new Mortgage(
+    let mortgage = new Mortgage (
       this.state.principal,
       this.state.interestRate,
       this.state.loanTerm,
-      this.state.period)
+      this.state.period )
     let monthlyPayment = mortgage.monthlyPayment()
     let monthly = document.getElementById('output')
     monthly.innerText = "$" + monthlyPayment
